@@ -4,7 +4,10 @@
       "Bash(/c/ProgramData/anaconda3/python.exe \"d:/patt/project/pattern-music/data prep/patch_notebook.py\")",
       "Bash(/c/ProgramData/anaconda3/python.exe -c ':*)",
       "Skill(claude-api)",
-      "Skill(claude-api:*)"
+      "Skill(claude-api:*)",
+      "Bash(git -C 'd:\\\\patt\\\\project\\\\pattern-music' log --oneline --all -- \"data prep/fma_phase1a_data_pipeline.py\" \"data prep/fma_phase1b_feature_extraction.py\")",
+      "Bash(python -c \" import json, sys nb = json.load\\(sys.stdin\\) for i, cell in enumerate\\(nb['cells']\\): src = ''.join\\(cell['source']\\) if cell['cell_type'] == 'code' and \\('split' in src or 'train' in src or 'augment' in src or 'scaler' in src\\): print\\(f'=== Cell {i} ==='\\) print\\(src[:1500]\\) print\\(\\) \")",
+      "Bash(python -c \" import json, sys nb = json.load\\(sys.stdin\\) for i, cell in enumerate\\(nb['cells']\\): src = ''.join\\(cell['source']\\) if cell['cell_type'] == 'code' and \\('split' in src.lower\\(\\) or 'train' in src.lower\\(\\) or 'test' in src.lower\\(\\)\\): print\\(f'=== Cell {i} ==='\\) print\\(src[:1500]\\) print\\(\\) \")"
     ]
   }
 }
